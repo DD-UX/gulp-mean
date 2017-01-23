@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-controller="AppController">
+  <head>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0" name="viewport">
+	<link rel="shortcut icon" href="/img/favicon.jpg?v=1">
+
+	<title data-ng-bind-template="{{$state.current.data.pageTitle}}">Gulp MEAN</title>
+
+
+	<!-- Facebook OG -->
+	<meta property="og:title" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="">
+	<meta property="fb:app_id" content="">
+	<meta property="og:type" content="App">
+	
+	<!-- Twitter card -->
+	<meta name="twitter:card" content="">
+	<meta name="twitter:site" content="">
+	
+	<!-- General meta information -->
+	<meta name="description" content="">
+
+	<!-- Styles compiled -->
+	<link href="/css/main.css" rel="stylesheet">
+
+	<!-- Scripts compiled -->
+	<script type="text/javascript" src="/js/all.js"></script>
+  </head>
+
+  <body class="" data-ng-class="{'header-active': $state.current.views.header.controller !== null}"> 
+  	<!-- Header partial -->
+	<span data-ng-cloak data-ui-view="header" data-ng-hide="$state.current.views.header.controller === null"></span>
+
+  	<!-- Main partial -->
+	<div data-ng-cloak data-ui-view="main" data-autoscroll="true" class="animated slideY"></div>
+
+  	<!-- Footer partial -->
+	<span data-ng-cloak data-ui-view="footer" data-ng-hide="$state.current.views.footer.controller === null"></span>
+  </body>
+</html>

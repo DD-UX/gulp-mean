@@ -1,0 +1,51 @@
+/* 
+ * Form component
+ */
+
+.c-form{
+  .col-12{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    position: relative;
+
+    .form-control-lg{
+      padding: 1.25rem 1.5rem 1.25rem 40px;
+      font-size: 1rem;
+      font-family: $font-family-sans-serif;
+
+      + .fa{
+        position: absolute;
+        left: 20px;
+        top: 22px;
+        color: #e1e1e1;
+        transition: $transition-base;
+      }
+
+      &:focus + .fa{
+        color: get-color('gray');
+      }
+
+      // Validations
+      &.ng-dirty{
+        &.ng-invalid{
+          border-color: red;
+          + .fa{
+            color: red;
+          }
+        }
+        &.ng-valid{
+          border-color: get-color('green');
+          + .fa{
+            color: get-color('green');
+          }
+        }
+      }
+
+
+    }
+    textarea.form-control-lg{
+      min-height: 150px;
+    }
+  }
+}

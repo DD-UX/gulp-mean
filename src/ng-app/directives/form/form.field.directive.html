@@ -1,0 +1,23 @@
+<!-- Form field directive tpl -->
+<div class="col-12" data-ng-class="{
+	'col-md-6': size === 'half'
+}">
+
+	<input data-ng-if="!textarea" type="{{type}}" 
+		   class="form-control form-control-lg"
+		   data-ng-required="{{required}}"
+		   data-ng-model="model"
+		   name="{{name}}"
+		   placeholder="{{placeholder}}"
+		   pattern="{{regex}}">
+
+	<textarea data-ng-if="!!textarea" 
+			  class="form-control form-control-lg"
+			  data-ng-required="{{required}}"
+			  data-ng-model="model"
+			  name="{{name}}"
+			  placeholder="{{placeholder}}" 
+   			  pattern="{{regex}}" ></textarea>
+
+	<i class="fa fa-{{icon}}" aria-hidden="true"></i>
+</div>

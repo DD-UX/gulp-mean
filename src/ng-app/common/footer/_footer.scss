@@ -1,0 +1,23 @@
+/**
+ * Footer styles
+ */
+
+ .m-footer{
+ 	background-color: get-color('red');
+ 	color: get-color('white');
+ 	text-shadow: 1px 1px 1px rgba(get-color('black'), 0.5);
+ 	margin-top: 60px;
+
+ 	.container-fluid {
+ 		min-height: 152px;
+ 		p {
+ 			margin-bottom: 0;
+ 			a {
+ 				color: inherit;
+ 			}
+ 			small{
+ 				font-size: $font-size-base;
+ 			}
+ 		}
+ 	}
+ }

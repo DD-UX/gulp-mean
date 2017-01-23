@@ -1,0 +1,26 @@
+/*
+ * Home page
+ */
+
+.page--home{
+	// .page--home__article
+	&__article{
+		padding-top: 50px;
+	}
+
+	// .page--home__inner-wrapper
+	&__inner-wrapper{
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	// .page--home__heading__small
+	&__heading__small{
+		text-align: center;
+		font-size: $font-size-lg;
+		text-decoration: underline;
+		color: get-color('black');
+		margin-bottom: 30px;
+	}
+}

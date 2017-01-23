@@ -1,0 +1,19 @@
+/**
+ * transform helpers
+ */
+
+/**
+ * Classes for all transform origin possibilities
+ * ex: `.right-center {transform-origin: right center;}`
+ */
+
+$x-positions: 'left', 'center', 'right';
+$y-positions: 'top', 'center', 'bottom';
+
+@each $x in $x-positions {
+  @each $y in $y-positions {
+    .transform-#{$x}-#{$y} {
+      transform-origin: #{$x} #{$y};
+    }
+  }
+}

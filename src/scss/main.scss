@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+// Basic handmade tools
+@import "functions/**/*";
+@import "mixins/**/*";
+@import "_variables";
+
+// Bootstrap override variables
+@import '_bootstrap-variables';
+  
+// // Bootstrap: http://getbootstrap.com/
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+/**
+ * Screen breakpoints from Bootstrap
+ */
+
+$screen-lg: map-get($grid-breakpoints, 'lg');
+$screen-md: map-get($grid-breakpoints, 'md');
+$screen-sm: map-get($grid-breakpoints, 'sm');
+$screen-xs: map-get($grid-breakpoints, 'xs');
+
+// // Font Awesome: http://fortawesome.github.io/Font-Awesome/icons/
+@import '../../node_modules/font-awesome/scss/font-awesome';
+  
+// Handmade shared components
+@import "shared-components/**/*";
+
+// General settings
+@import "_general-styles";
+
+// App Sass Common
+@import "../ng-app/directives/**/*";
+
+// App Sass Common
+@import "../ng-app/common/**/*";
+
+// App Sass Components
+@import "../ng-app/components/**/*";

@@ -1,0 +1,18 @@
+/**
+ * Retina helpers to show or hide elements regarding the DPI
+ * Use `.retina-visible` for displaying elements on HIDPI only
+ * and `.retina-hidden` for hiding those elements on HIDPI
+ */
+
+.retina--visible {
+  display: none;
+}
+
+@include hidpi {
+  .retina--visible {
+    display: block;
+  }
+  .retina--hidden {
+    display: none;
+  }
+}

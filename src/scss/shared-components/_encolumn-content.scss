@@ -1,0 +1,29 @@
+/* 
+ * Encolumn content component
+ */
+
+.c-encolumn-content{
+  column-gap: $grid-gutter-width-base;
+
+  // Iterate through Bootstrap breakpoints 
+  @each $bp, $size in $grid-breakpoints{
+
+    // Using Progressive enhancement mediaqueries
+    @include media-breakpoint-up(#{$bp}){
+
+      // Generate four different classes for every breakpoint
+      @for $i from 1 to 5{
+
+        // .c-encolumn-content__{breakpoint}--{columns}
+        &__#{$bp}--#{$i}{
+          column-count: $i;
+        }
+      }
+    }
+  }
+}
+
+ul.c-encolumn-content{
+  column-gap: $grid-gutter-width-base * 1.5;
+  padding-left: 20px;
+}

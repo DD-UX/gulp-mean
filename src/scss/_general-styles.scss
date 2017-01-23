@@ -1,0 +1,46 @@
+/**
+ * General Styles space to override properties coming straight from Bootstrap
+ * (non configurable on `assets/sass/_bootstrap-variables.scss`)
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+    @include antialiasing;
+    overflow-x: hidden;
+}
+
+body {
+    b {
+        font-weight: 600;
+    }
+    a {
+        @extend .transition;
+    }
+    pre {
+        white-space: pre-wrap!important;
+        background-color: lighten(get_color('gray'), 40%);
+        color: darken(get_color('gray'), 40%);
+        padding: 10px;
+        border-radius: 5px;
+        border: solid 1px get_color('gray');
+    }
+
+    .nav > li > a:focus {
+        background-color: inherit;
+    }
+
+    button:focus{
+       outline: none!important;
+    }
+}
+
+.container {
+    transition: $transition-base;
+}
+
+.dropdown-item {
+    &.active {
+        a {color: inherit;}
+    }
+}

@@ -1,0 +1,54 @@
+<header data-ng-class="{'navbar-mobile-active': !$ctrl.isLongNavCollapsed}"
+		class="navbar fixed-top navbar-light flex-row flex-wrap justify-content-md-end">
+	
+
+	<!-- Toptal branding -->
+	<a href="#" class="mr-auto navbar-brand" data-ui-sref="home">
+		<h1>Gulp-mean</h1>
+	</a>
+
+	<nav class="align-self-center">
+		<ul class="navbar-nav flex-row c-short-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="#" data-ui-sref="home">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="btn btn-success c-btn-toptal" href="#" data-ui-sref="home">
+					<span class="hidden-sm-down">"Code" to action</span>
+					<i class="fa fa-code fa-2x hidden-md-up" aria-hidden="true"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- Mobile collapser button -->
+	<button class="navbar-toggler navbar-toggler-right hidden-md-up transition"
+			type="button" data-ng-click="$ctrl.isLongNavCollapsed = !$ctrl.isLongNavCollapsed"
+			aria-expanded="{{!$ctrl.isLongNavCollapsed}}" aria-label="Toggle navigation"
+			data-ng-class="{'active': !$ctrl.isLongNavCollapsed}">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<!-- Right navbar (collapsed in mobile) -->
+	<nav class="c-long-nav navbar-collapse"
+		 data-uib-collapse="$ctrl.isLongNavCollapsed">
+		<ul class="navbar-nav flex-md-row">
+			<li class="nav-item">
+				<a class="nav-link" href="#" data-ui-sref="home">Item 1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#" data-ui-sref="home">Item 2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#" data-ui-sref="home">Item 3</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#" data-ui-sref="home">Item 4</a>
+			</li>
+			<li class="nav-item nav-item__phone nav-item__spacer">
+				<a class="nav-link" href="tel:888.888.8888">Call us: 888.888.8888</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+

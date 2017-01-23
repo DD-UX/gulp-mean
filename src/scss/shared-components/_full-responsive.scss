@@ -1,0 +1,11 @@
+/**
+ * `full-responsive` is a class to make almost any element grows fluidly to its limits
+ * Very handy for assets like <img>, <video>, etc
+ * Is intended to replace .img-fluid which limits the size to its max-width
+ * instead of spaning its whole wrapper
+ */
+
+.full-responsive {
+  width: 100%;
+  display: block;
+}

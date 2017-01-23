@@ -1,0 +1,141 @@
+<section class="page--home container">
+
+	<!-- Section::Form components -->
+	<article class="page--home__article">
+		<h3 class="page--home__heading__small">Super form directives ready to work with your MongoDB</h3>
+		<div data-form-mail 
+		     data-callback="$ctrl.sendForm()"
+		     data-status="$ctrl.status"
+		     data-is-loading="$ctrl.loading"
+		     data-name="$ctrl.formMail"
+		     data-message="$ctrl.message"
+		     data-submit-text="Submit"
+		     >
+			
+		    <!-- Input Name -->
+			<span data-form-mail-field
+				  data-name="name"
+				  data-placeholder="Name"
+				  data-type="text"
+				  data-size="half"
+				  data-icon="user"
+				  data-is-required="true"
+				  data-model="$ctrl.leaderForm.name"
+				  ></span>
+
+			<!-- Input Email -->
+			<span data-form-mail-field
+				  data-name="email"
+				  data-placeholder="Email"
+				  data-type="email"
+				  data-size="half"
+				  data-icon="envelope"
+				  data-is-required="true"
+				  data-model="$ctrl.leaderForm.email"
+				  data-regex="^([\w-\.]+)@(?:[\w]+\.)([\a-zA-Z]{2,4})$"
+				  ></span>
+
+			<!-- Input Location -->
+			<span data-form-mail-field
+				  data-name="location"
+				  data-placeholder="City & country"
+				  data-type="text"
+				  data-size="half"
+				  data-icon="map-marker"
+				  data-is-required="true"
+				  data-model="$ctrl.leaderForm.location"
+				  ></span>
+
+			<!-- Input Twitter -->
+			<span data-form-mail-field
+				  data-name="twitter_user"
+				  data-placeholder="Twitter"
+				  data-type="text"
+				  data-size="half"
+				  data-icon="twitter"
+				  data-is-required="true"
+				  data-model="$ctrl.leaderForm.twitter_user"
+				  data-regex="^[^\@][^\s-][\w]+$"
+				  ></span>
+
+			<!-- Textarea Comment -->
+			<span data-form-mail-field
+				  data-name="comment"
+				  data-placeholder="Comment"
+				  data-icon="comment"
+				  data-is-required="true"
+				  data-model="$ctrl.leaderForm.comment"
+				  data-regex=""
+				  is-textarea="true"
+				  ></span>
+		</div>
+	</article>
+	<!-- END Section::Form components -->
+
+	<!-- Section::Encolumn list -->
+	<article class="page--home__article page--home__sample-profiles">
+		<h3 class="page--home__heading__small">Encolumn elements component</h3>
+		<p>This columns are just one <code>&lt;ul&gt;</code> styled with multi column CSS3 feature.</p>
+		<p>You can find the component ready to use in <code>/src/scss/shared-components/_encolumn-content.scss</code></p>
+		<ul class="c-encolumn-content c-encolumn-content__md--4 c-encolumn-content__sm--2 c-encolumn-content__xs--1">
+			<li data-ng-repeat="country in $ctrl.countries track by $index">
+				<a data-ng-href="https://restcountries.eu/rest/v1/name/{{country.name}}" href="#" data-ng-bind="country.name" target="_blank"></a>
+			</li>
+		</ul>
+	</article>
+	<!-- END Section::Encolumn list -->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

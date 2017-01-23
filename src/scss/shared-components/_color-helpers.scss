@@ -1,0 +1,38 @@
+/**
+ * Iterating color map to get all the elements added in the project
+ * to create color helpers for text color, background color and border color.
+ * For each of these we can handle the regular state, hover and focus
+ * Try: `text__blue` for color blue, `bg__orange--hover` or `border__green-focus`
+ */
+
+$props_list: (
+  'bg': 'background-color',
+  'text': 'color',
+  'border-color': 'border-color',
+  'border': 'border'
+);
+
+$pseudo_classes: 'hover', 'focus', 'checked', 'active';
+
+// Iterating the colors ($color) and their keys ($name)
+@each $name, $color in $color_list { 
+  // Iterating the properties for the different classes ($prop_property) and their keys ($prop) for naming classes
+  @each $prop, $prop_property in $props_list { 
+    .#{$prop}__#{$name} {
+      @if $prop == border {
+        #{$prop_property}: solid 1px $color!important;
+      } @else {
+        #{$prop_property}: $color!important;
+      }
+    }
+    @each $pseudo_class in $pseudo_classes { // Iterating different pseudo classes ($pseudo_class)
+      .#{$prop}__#{$name}--#{$pseudo_class}:#{$pseudo_class} {
+        @if $prop == border {
+          #{$prop_property}: solid 1px $color!important;
+        } @else {
+          #{$prop_property}: $color!important;
+        }
+      }
+    }
+  }
+}

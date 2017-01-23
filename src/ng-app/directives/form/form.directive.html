@@ -1,0 +1,31 @@
+<!-- Form directive tpl -->
+<form class="c-form" 
+	  name="name"
+	  novalidate
+	  data-ng-submit="callback()"
+	  >
+	<ul class="mt-2" id="form-flags" data-ng-class="{
+		'list-unstyled': message.length === 1
+	}">
+		<li data-ng-repeat="msg in message track by $index" data-ng-class="{
+			'text-success': status === 'success',
+			'text-danger': status === 'error'
+		}"
+		data-ng-bind-html="msg.msg"
+		data-ng-if="!!message"></li>
+	</ul>  
+	<div class="row" data-ng-transclude></div>
+
+	<div class="row justify-content-end">
+		<div class="col-12">
+			<button type="submit"
+					data-ng-disabled="name.$invalid || loading" 
+					data-ng-class="{'disabled': (name.$invalid || loading)}"
+					class="btn btn-success btn-lg float-md-right">
+
+				<i class="fa fa-spinner fa-pulse fa-fw" data-ng-show="loading"></i>
+				<span data-ng-bind-template="{{submit}}">Submit</span>
+			</button>
+		</div>
+	</div>
+</form>

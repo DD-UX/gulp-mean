@@ -1,0 +1,17 @@
+/**
+ * Include this mixin on any selector to use a mediaquery for HIDPI.
+ * You can simply use it as is and will work with a 1.3 pixel density
+ * or you might pass a different argument.
+ *
+ * Examples: `@include hidpi(1.5)` or simply `@include hidpi`
+ */
+
+@mixin hidpi($ratio: 1.3) {
+  @media  screen and (-webkit-min-device-pixel-ratio: $ratio),
+          screen and (min--moz-device-pixel-ratio: $ratio),
+          screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+          screen and (min-resolution: round($ratio * 96dpi)),
+          screen and (min-resolution: $ratio * 1dppx) {
+            @content;
+          }
+}

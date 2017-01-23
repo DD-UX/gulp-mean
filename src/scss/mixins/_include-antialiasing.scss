@@ -1,0 +1,10 @@
+/**
+ * Include this mixin on any object to force antialiasing.
+ * Currently implemented on `<body>` tag.
+ */
+
+@mixin antialiasing {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(get_color("black"), 0.004);
+  -moz-osx-font-smoothing: grayscale;
+}

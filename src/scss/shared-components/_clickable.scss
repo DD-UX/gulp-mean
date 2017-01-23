@@ -1,0 +1,12 @@
+/**
+ * `clickable` is very handy for components in Angular
+ * which doesn't need to be wrapped on an anchor and require styles
+ * like `cursor: pointer;`.
+ * Also disabled `user-select` to avoid marking elements on clicking repeatedly.
+ */
+
+.clickable,
+%clickable {
+  cursor: pointer;
+  user-select: none;
+}

@@ -1,0 +1,7 @@
+/**
+ * In _variables.scss partial there is a color map to handle all the colors in the project
+ */
+
+@function get_color($color){
+  @return map-get($color_list, $color);
+};

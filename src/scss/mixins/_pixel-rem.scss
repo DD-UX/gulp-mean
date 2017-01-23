@@ -1,0 +1,9 @@
+/**
+ * Mixin used to pass a css property and assign px and rem
+ * Pixel used for fallback and root em for modern browsers
+ */
+
+@mixin pixel-rem ($val: 14, $prop: 'font-size') {
+  #{$prop}: $val + px;
+  #{$prop}: ($val * 0.1) + rem;
+}

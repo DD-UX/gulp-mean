@@ -1,0 +1,72 @@
+/**
+ * `[ui-view="main"]` is the vessel of the angular views.
+ * By using data-ng-enter + data-ng-leave classes we can animate
+ * the enter and exit of them.
+ * I'm using Animate.css library (included with Bower)
+ * for animations.
+ * Create new super cool stuff on your own!
+ */
+
+[ui-view="main"] {
+  height: 100%;
+  background: #fff;
+  
+  &.ng-leave,
+  &.ng-enter {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    overflow: hidden;
+    animation-duration: 1s;
+  }
+  
+  &.bounce {
+    &.ng-leave {
+      animation-name: bounceOutDown;
+    }
+
+    &.ng-enter {
+      animation-name: bounceInDown;
+    }
+  }
+  
+  &.fade {
+    &.ng-leave {
+      animation-name: fadeOutDown;
+    }
+
+    &.ng-enter {
+      animation-name: fadeInDown;
+    }
+  }
+  
+  &.slideY {    
+    &.ng-leave {
+      animation-name: slideOutUp;
+    }
+
+    &.ng-enter {
+      animation-name: slideInUp;
+    }
+  }
+  
+  &.slideX {    
+    &.ng-leave {
+      animation-name: slideOutRight;
+    }
+
+    &.ng-enter {
+      animation-name: slideInRight;
+    }
+  }
+  
+  &.wackyTransition {    
+    &.ng-leave {
+      animation-name: rollOut;
+    }
+
+    &.ng-enter {
+      animation-name: bounceInUp;
+    }
+  }
+}
