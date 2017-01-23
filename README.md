@@ -52,7 +52,7 @@ Concat two different streams into a final CSS file:
 Stream with all the `*.css` files from dependencies folder (ex. [animate.css](https://daneden.github.io/animate.css/))
 
 **sassStream**
-Stream which takes all `*.scss` files from [src/scss](../tree/master/src/scss) through [main.scss](../blob/master/src/scss/main.scss)
+Stream which takes all `*.scss` files from [src/scss](../../tree/master/src/scss) through [main.scss](../blob/master/src/scss/main.scss)
 
 Execution :grin:
 
