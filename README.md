@@ -52,7 +52,7 @@ Concat two different streams into a final CSS file:
 Stream with all the `*.css` files from dependencies folder (ex. [animate.css](https://daneden.github.io/animate.css/))
 
 **sassStream**
-Stream which takes all `*.scss` files from [src/scss](../tree/master/src/scss) through [main.scss](../blob/master/src/scss/main.scss)
+Stream which takes all `*.scss` files from [src/scss](../../tree/master/src/scss) through [main.scss](../../blob/master/src/scss/main.scss)
 
 Execution :grin:
 
@@ -61,7 +61,7 @@ $ gulp sass
 ```
 
 ### Scripts
-Concat all JS files coming whether from `npm_modules` and [src/js](../tree/master/src/js):
+Concat all JS files coming whether from `npm_modules` and [src/js](../../tree/master/src/js):
 
 * Destination: `public/js/all.js`
 * Task dependency: **ng-templates** task
@@ -74,7 +74,7 @@ $ gulp scripts
 ```
 
 ### Ng-templates
-Searches for all angular html templates at [src](../tree/master/src) and compiles them into an angular module with [templateCache](https://docs.angularjs.org/api/ng/service/$templateCache):
+Searches for all angular html templates at [src](../../tree/master/src) and compiles them into an angular module with [templateCache](https://docs.angularjs.org/api/ng/service/$templateCache):
 
 * Destination: `src/js/templates.js`
 
@@ -115,7 +115,7 @@ $ gulp images
 ```
 
 ### Layout
-Export [index.html](../blob/master/src/index.html) layout:
+Export [index.html](../../blob/master/src/index.html) layout:
 
 * Destination: `public/`
 
@@ -143,10 +143,10 @@ This task run in three different streams:
 Every file from `public` is exported to `build/public`
 
 **appStream**
-[app.js](../blob/master/app.js), [config.js](../blob/master/config.js) and [package.json](../blob/master/package.json) are exported to `build`
+[app.js](../../blob/master/app.js), [config.js](../../blob/master/config.js) and [package.json](../../blob/master/package.json) are exported to `build`
 
 **apiStream**
-Every file inside [api](../tree/master/api) folder is exported to `build/api`
+Every file inside [api](../../tree/master/api) folder is exported to `build/api`
 
 *Note: This is the task you would execute when you need to deliver the project to the client*
 
@@ -160,14 +160,14 @@ $ gulp build
 Maybe the most important task for development process. It executes **dependencies** and right after sets a few things:
 
 **Server**
-Opens a communication with [app.js](../blob/master/app.js) to use [Express](http://expressjs.com/) with [MongoDB](https://www.mongodb.com/). The environment is already set as `env: {NODE_ENV: 'development'}` so **Livereleoad** will be active (along with other development mode dependencies).
+Opens a communication with [app.js](../../blob/master/app.js) to use [Express](http://expressjs.com/) with [MongoDB](https://www.mongodb.com/). The environment is already set as `env: {NODE_ENV: 'development'}` so **Livereleoad** will be active (along with other development mode dependencies).
 
 **Watchers**
-* `*.scss` files at [src](../tree/master/src). Runs **sass** task after a change
-* `*.js` files at [src](../tree/master/src) and `*.html` files at [src](../tree/master/src/ng-app). Runs **scripts** task after a change
-* `index.html` file at [src](../tree/master/src). Runs **layout** task after a change
+* `*.scss` files at [src](../../tree/master/src). Runs **sass** task after a change
+* `*.js` files at [src](../../tree/master/src) and `*.html` files at [src](../../tree/master/src/ng-app). Runs **scripts** task after a change
+* `index.html` file at [src](../../tree/master/src). Runs **layout** task after a change
 * `*.html`, `*.scss` and `*.js` files within `./public` to notify the server and reload the page (for CSS the **Livereleoad** only overrides the stylesheet)
-* [app.js](../blob/master/app.js), [config.js](../blob/master/config.js) and `**/*.js` inside [api](../tree/master/api) to reload the server if any change is performed.
+* [app.js](../../blob/master/app.js), [config.js](../../blob/master/config.js) and `**/*.js` inside [api](../../tree/master/api) to reload the server if any change is performed.
 
 *Note: This is the task you would execute when you want to run the app*
 
@@ -186,7 +186,7 @@ $ gulp
 Send email to MongoDB (`gulp_mean` DB - `forms` Collection)
 
 * Type: `POST`
-* [Model](../blob/master/api/models/form.js):
+* [Model](../../blob/master/api/models/form.js):
 - '_id': `Object`,
 - 'timestamp': `String`,
 - 'name': `String`,
