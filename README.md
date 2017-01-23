@@ -1,4 +1,4 @@
-# Toptal front end development test
+# Gulp MEAN project starter
 
 Components:
 * [MongoDB](https://www.mongodb.com/)
@@ -106,7 +106,7 @@ Concat two different streams that compress and exports images:
 Process all `*.{png,jpg,jpeg}` files using [TinyPNG API](https://tinypng.com/developers) only if those images not listed into a `public/img/.tinypng-sigs`. Since the free account has a monthly limit is a good advantage for developers that work daily on the project.
 
 **svgStream**
-Process all `*.svg` files using [SVGmin](https://github.com/ben-eb/gulp-svgmin). Toptal logo is an SVG
+Process all `*.svg` files using [SVGmin](https://github.com/ben-eb/gulp-svgmin).
 
 Execution :grin:
 
@@ -183,7 +183,7 @@ $ gulp
 ```
 /api/form/send
 ```
-Send email to MongoDB (`toptal_test` DB - `forms` Collection)
+Send email to MongoDB (`gulp_mean` DB - `forms` Collection)
 
 * Type: `POST`
 * [Model](../blob/master/api/models/form.js):
