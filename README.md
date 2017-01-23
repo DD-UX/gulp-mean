@@ -61,7 +61,7 @@ $ gulp sass
 ```
 
 ### Scripts
-Concat all JS files coming whether from `npm_modules` and [src/js](../tree/master/src/js):
+Concat all JS files coming whether from `npm_modules` and [src/js](/tree/master/src/js):
 
 * Destination: `public/js/all.js`
 * Task dependency: **ng-templates** task
