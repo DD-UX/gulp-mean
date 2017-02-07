@@ -4,3 +4,5 @@ node_modules/
 public/
 build/
 src/js/templates.js
+
+.idea/*
