@@ -2,7 +2,7 @@
 // Get all the packages ============================================
 // =================================================================
 var config = require('./config');
-var public = config.publicUrl;
+var publicUrl = config.publicUrl;
 
 // Express
 var express             = require('express');
@@ -33,7 +33,7 @@ if ( process.env.NODE_ENV === 'development' ){
 mongoose.Promise = require('bluebird');
 
 // app use
-app.use(express.static(public));
+app.use(express.static(publicUrl));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(expressValidator());
@@ -55,7 +55,7 @@ if ( process.env.NODE_ENV === 'development' ){
     // Root 
     app
         .get('/', function(req, res){
-            res.sendFile(public + 'index.html');
+            res.sendFile(publicUrl + 'index.html');
         });
 
 // API routes

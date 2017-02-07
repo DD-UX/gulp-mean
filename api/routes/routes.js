@@ -2,7 +2,6 @@
 // Get all the packages ============================================
 // =================================================================
 var config = require('../../config');
-var public = config.publicUrl;
 
 var mongoose	 = require('mongoose');
 var FormSchema	 = require('../models/form');
